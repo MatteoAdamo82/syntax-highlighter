@@ -1,0 +1,93 @@
+pre {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1em 0;
+    position: relative;
+    padding-top: 2.5rem;
+}
+
+pre code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #d4d4d4;
+    display: block;
+    white-space: pre;
+}
+
+/* Tokens */
+.token.comment {
+    color: #6a9955;
+    font-style: italic;
+}
+
+.token.string, .token.template {
+    color: #ce9178;
+}
+
+.token.keyword {
+    color: #569cd6;
+}
+
+.token.function {
+    color: #dcdcaa;
+}
+
+.token.number {
+    color: #b5cea8;
+}
+
+.token.operator {
+    color: #d4d4d4;
+}
+
+.token.tag {
+    color: #569cd6;
+}
+
+.token.attribute {
+    color: #9cdcfe;
+}
+
+/* Hover effects per il pulsante copia */
+.copy-button:hover {
+    background: #3f3f3f !important;
+}
+
+.copy-button:active {
+    transform: translateY(1px);
+}
+
+/* Stili di default che possono essere sovrascritti */
+.syntax-highlighter-copy {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background: #2d2d2d;
+    border: 1px solid #3f3f3f;
+    border-radius: 4px;
+    color: #d4d4d4;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s;
+}
+
+.syntax-highlighter-copy:hover {
+    background: #3f3f3f;
+}
+
+.syntax-highlighter-lang {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 3px 6px;
+    background: #2d2d2d;
+    border: 1px solid #3f3f3f;
+    border-radius: 4px;
+    color: #d4d4d4;
+    font-size: 12px;
+    font-family: monospace;
+}
