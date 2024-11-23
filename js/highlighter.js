@@ -177,16 +177,16 @@ export class SyntaxHighlighter {
     createCopyButton(code) {
         const button = document.createElement('button');
         button.className = 'syntax-highlighter-copy';
-        button.innerHTML = 'Copia';
+        button.innerHTML = 'Copy';
         button.addEventListener('click', () => {
             navigator.clipboard.writeText(code)
                 .then(() => {
-                    button.innerHTML = 'Copiato!';
-                    setTimeout(() => button.innerHTML = 'Copia', 2000);
+                    button.innerHTML = 'Copied!';
+                    setTimeout(() => button.innerHTML = 'Copy', 2000);
                 })
                 .catch(() => {
-                    button.innerHTML = 'Errore!';
-                    setTimeout(() => button.innerHTML = 'Copia', 2000);
+                    button.innerHTML = 'Error!';
+                    setTimeout(() => button.innerHTML = 'Copy', 2000);
                 });
         });
         return button;
