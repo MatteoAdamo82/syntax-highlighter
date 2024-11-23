@@ -62,7 +62,6 @@ export class SyntaxHighlighter {
 
         let tokens = [];
 
-        // Prima processa i pattern
         langConfig.patterns.forEach(({ type, regex }) => {
             let match;
             while ((match = regex.exec(code)) !== null) {
@@ -75,7 +74,6 @@ export class SyntaxHighlighter {
             }
         });
 
-        // Poi processa le keywords
         if (langConfig.keywords.length > 0) {
             const keywordRegex = new RegExp(`\\b(${langConfig.keywords.join('|')})\\b`, 'g');
             let match;
