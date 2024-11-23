@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="highlighter.css">
+<meta charset="UTF-8">
+<title>Syntax Highlighter</title>
+<link rel="stylesheet" href="css/highlighter.css">
 </head>
 <body>
-<div class="code-block">
-<pre>
-    <code>
-        const numbers = [1, 2, 3, 4, 5];
-        // Questo è un commento
-        function sumArray(arr) {
+<pre><code class="language-javascript">
+const numbers = [1, 2, 3, 4, 5];
+// Questo è un commento
+function sumArray(arr) {
         return arr.reduce((acc, curr) => acc + curr, 0);
-        }
+}
 
-        const result = sumArray(numbers);
-        console.log(`La somma è: ${result}`);
+const result = sumArray(numbers);
+console.log(`La somma è: ${result}`);
+</code></pre>
+
+<pre>
+    <code class="language-javascript">
+      <span class="token keyword">const</span>
+      <span class="token function">sumArray</span>
+      ...
     </code>
-</pre>
-</div>
+  </pre>
 
-<script src="highlighter.js"></script>
+<script type="module">
+import { SyntaxHighlighter } from './js/highlighter.js';
+
+// Configurazione personalizzata
+const highlighter = new SyntaxHighlighter({
+    languages: ['javascript'],
+    autodetect: true,
+    defaultLanguage: 'javascript',
+    copyButton: true,
+    languageLabel: true
+});
+</script>
 </body>
 </html>

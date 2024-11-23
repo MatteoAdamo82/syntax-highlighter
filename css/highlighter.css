@@ -23,7 +23,8 @@ pre code {
     font-style: italic;
 }
 
-.token.string, .token.template {
+.token.string,
+.token.template {
     color: #ce9178;
 }
 
@@ -43,24 +44,15 @@ pre code {
     color: #d4d4d4;
 }
 
-.token.tag {
-    color: #569cd6;
-}
-
-.token.attribute {
+.token.variable {
     color: #9cdcfe;
 }
 
-/* Hover effects per il pulsante copia */
-.copy-button:hover {
-    background: #3f3f3f !important;
+.token.regex {
+    color: #d16969;
 }
 
-.copy-button:active {
-    transform: translateY(1px);
-}
-
-/* Stili di default che possono essere sovrascritti */
+/* UI Elements */
 .syntax-highlighter-copy {
     position: absolute;
     top: 10px;
@@ -90,4 +82,8 @@ pre code {
     color: #d4d4d4;
     font-size: 12px;
     font-family: monospace;
+}
+
+.token {
+    border: 1px solid red;
 }
